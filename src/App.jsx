@@ -1,11 +1,28 @@
 import { useState } from 'react'
-import './App.css'
+import PhaseOne from './phases/PhaseOne';
+import PhaseTwo from './phases/PhaseTwo';
 
 function App() {
 
+  const [level, setLevel] = useState(1);
+
+
+  function getCurrentLevel(){
+
+    switch(level){
+      case 1: return <PhaseOne />
+      case 2: return <PhaseTwo />
+    }
+
+  }
+
   return (
     <div>
-      <p>tetest</p>
+      {getCurrentLevel()}
+      <button
+        onClick={() => setLevel(level + 1)}
+      >
+      Next Level</button>
     </div>
   )
 }
