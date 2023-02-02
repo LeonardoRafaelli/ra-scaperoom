@@ -19,10 +19,10 @@ function App() {
   return (
     <div>
       {getCurrentLevel()}
-      <button
+      {/* <button
         onClick={() => setLevel(level + 1)}
       >
-      Next Level</button>
+      Next Level</button> */}
     </div>
   )
 }
