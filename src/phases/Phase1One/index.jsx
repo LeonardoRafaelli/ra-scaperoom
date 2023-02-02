@@ -12,6 +12,11 @@ export default function PhaseOne(props) {
       case "opostos":
         props.setLevel(props.level + 1)
         break;
+
+      case "oposto":
+        alert("talvez não sejam só 2 lados")
+        break;
+
       default:
         alert("Resposta errada")
         setAnswer("")
@@ -32,7 +37,12 @@ export default function PhaseOne(props) {
             type="text"
             placeholder="Resposta"
             value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
+            onChange={(e) => setAnswer(e.target.value.toLowerCase())}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleAnswer();
+              }
+            }}
           />
           <button id="botaoEnviar" onClick={handleAnswer}>Enviar</button>
         </div>
