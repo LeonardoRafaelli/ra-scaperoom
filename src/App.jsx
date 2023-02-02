@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import PhaseOne from './phases/PhaseOne';
-import PhaseTwo from './phases/PhaseTwo';
+import PhaseOne from './phases/Phase1One';
+import PhaseTwo from './phases/Phase2Two';
 
 function App() {
 
