@@ -12,15 +12,6 @@ import PhaseTen from './phases/Phase10Ten';
 
 function App() {
 
-  const [level, setLevel] = useState(1);
-
-  const handleLevelChange = () => {
-    if(level < 10){
-      setLevel(level + 1);
-    }
-  }
-
-
   function getCurrentLevel(){
     switch(level){
       case 1: return <PhaseOne />
@@ -39,10 +30,6 @@ function App() {
   return (
     <div>
       {getCurrentLevel()}
-      <button
-        onClick={handleLevelChange}
-      >
-      Next Level</button>
     </div>
   )
 }
