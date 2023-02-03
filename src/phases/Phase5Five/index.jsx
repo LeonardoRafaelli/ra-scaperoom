@@ -12,7 +12,7 @@ export default function PhaseFive(props) {
     } else if (answer === "cesar") {
       alert("Sim");
     } else if (answer === "macaco") {
-      alert("Sunggo");
+      alert("baka adda naganna");
     } else {
       alert("Resposta errada!");
       setAnswer("");
