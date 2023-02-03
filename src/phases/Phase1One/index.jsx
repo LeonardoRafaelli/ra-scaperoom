@@ -12,21 +12,12 @@ export default function PhaseOne(props) {
 
         break;
       case "oposto":
-<<<<<<< HEAD
         alert("s")
         break;
 
       default:
         alert("Resposta errada!")
         setAnswer("")
-=======
-        alert("talvez não sejam só 2 lados");
-        break;
-
-      default:
-        alert("Resposta errada");
-        setAnswer("");
->>>>>>> b55a1dd5815a2986855e422be5690d60c3c379d9
         break;
     }
   };
