@@ -14,7 +14,6 @@ export default function PhaseOne(props) {
       case "oposto":
         alert("+s")
         break;
-
       default:
         alert("Resposta errada!")
         setAnswer("")
