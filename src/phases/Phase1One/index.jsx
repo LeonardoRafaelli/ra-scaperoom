@@ -12,13 +12,12 @@ export default function PhaseOne(props) {
       case "opostos":
         props.setLevel(props.level + 1)
         break;
-
       case "oposto":
-        alert("talvez não sejam só 2 lados")
+        alert("s")
         break;
 
       default:
-        alert("Resposta errada")
+        alert("Resposta errada!")
         setAnswer("")
         break;
     }
