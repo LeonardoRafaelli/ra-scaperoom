@@ -84,3 +84,9 @@ h1 {
     height: 50px;
     display: flex;
 }
+
+#mostrar {
+    position: absolute;
+    top: 50rem;
+    right: 20rem;
+}
