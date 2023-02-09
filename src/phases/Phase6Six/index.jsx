@@ -1,11 +1,11 @@
-import "react";
+import {useState} from "react";
 import "../../styleFases.css";
 import imagem50 from "../../markers/50.png";
 import "../../Shake.css";
 
 export default function PhaseSix(props) {
   const [isShaking, setIsShaking] = useState(false);
-  
+
   return (
     <div className={`shake-container ${isShaking ? "shake" : ""}`}>
       <div id="container">
