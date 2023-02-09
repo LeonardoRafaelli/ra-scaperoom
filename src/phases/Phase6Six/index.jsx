@@ -1,5 +1,5 @@
 import "react";
-import {useState} from "react";
+import { useState } from "react";
 import "../../styleFases.css";
 import imagem50 from "../../markers/50.png";
 import "../../Shake.css";
@@ -12,9 +12,13 @@ export default function PhaseSix(props) {
     if (answer === "leonardo di ser piero da vinci") {
       props.setLevel(props.level + 1);
     } else if (answer === "leonardo da vinci") {
-      alert("Completar algo é como colocar a última peça de um quebra-cabeça, dando sentido e realização à nossa jornada.");
+      alert(
+        "Completar algo é como colocar a última peça de um quebra-cabeça, dando sentido e realização à nossa jornada."
+      );
     } else if (answer === "vinci") {
-      alert("Sobrenomes são como marcas de família, unindo passado, presente e futuro. Mas só, não podem definir uma pessoa.");
+      alert(
+        "Sobrenomes são como marcas de família, unindo passado, presente e futuro. Mas só, não podem definir uma pessoa."
+      );
     } else {
       setIsShaking(true);
       setTimeout(() => {
@@ -22,7 +26,7 @@ export default function PhaseSix(props) {
       }, 1000);
     }
   };
-  
+
   return (
     <div className={`shake-container ${isShaking ? "shake" : ""}`}>
       <div id="container">
