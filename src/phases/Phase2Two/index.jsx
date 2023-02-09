@@ -75,6 +75,12 @@ export default function PhaseTwo(props) {
             >
               Aqui
             </p>
+            <button
+              id="botaoEnviar"
+              onClick={() => props.setLevel(props.level + 1)}
+            >
+              Enviar
+            </button>
           </div>
         </div>
       </div>

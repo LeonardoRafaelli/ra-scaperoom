@@ -43,7 +43,10 @@ export default function PhaseFive(props) {
                 }
               }}
             />
-            <button id="botaoEnviar" onClick={handleAnswer}>
+            <button
+              id="botaoEnviar"
+              onClick={() => props.setLevel(props.level + 1)}
+            >
               Enviar
             </button>
           </div>
