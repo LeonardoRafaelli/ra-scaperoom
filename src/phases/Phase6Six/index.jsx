@@ -3,6 +3,9 @@ import "../../styleFases.css";
 import imagem50 from "../../markers/50.png";
 
 export default function PhaseSix(props) {
+
+  
+
   return (
     <div id="container">
       <div id="texto">
