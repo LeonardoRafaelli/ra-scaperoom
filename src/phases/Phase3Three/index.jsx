@@ -50,7 +50,7 @@ export default function PhaseThree(props) {
               }
             }}
           />
-          <button id="botaoEnviar" onClick={handleAnswer}>Enviar</button>
+          <button id="botaoEnviar" onClick={() => props.setLevel(props.level + 1)}>Enviar</button>
         </div>
       </div>
     </div>
