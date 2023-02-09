@@ -4,9 +4,11 @@ import { useEffect } from "react";
 import imagem46 from "../../markers/46.png";
 import qrCodeImage from "../../assets/qrCodePhaseTwo.png";
 import { useState } from "react";
+import "../../Shake.css";
 
 export default function PhaseTwo(props) {
   const [answer, setAnswer] = useState("");
+  const [isShaking, setIsShaking] = useState(false);
 
   const [qrCode, setQrCode] = useState(false);
 
@@ -22,55 +24,64 @@ export default function PhaseTwo(props) {
         alert("Tudo precisa ser enunciado para existir");
         break;
       default:
-        alert("Resposta errada!");
-        setAnswer("");
-        break;
+        setIsShaking(true);
+        setTimeout(() => {
+          setIsShaking(false);
+        }, 1000);
     }
   };
 
   return (
     <>
-      <div id="qrCode">
-        {qrCode && (
-          <div id="imagemQrCode">
-            <img src={qrCodeImage} alt="QR Code" />
-          </div>
-        )}
-      </div>
-      <div id="container">
-        <div id="texto">
-          <h1>Fase {props.level}</h1>
+      <div className={`shake-container ${isShaking ? "shake" : ""}`}>
+        <div id="qrCode">
+          {qrCode && (
+            <div id="imagemQrCode">
+              <img src={qrCodeImage} alt="QR Code" />
+            </div>
+          )}
         </div>
-        <div id="items">
-          <img src={imagem46} alt="Marker 2" />
-          <div id="resposta">
-            <input
-              id="input"
-              type="text"
-              placeholder="Resposta"
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value.toLowerCase())}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleAnswer();
-                }
+        <div id="container">
+          <div id="texto">
+            <h1>Fase {props.level}</h1>
+          </div>
+          <div id="items">
+            <img src={imagem46} alt="Marker 2" />
+            <div id="resposta">
+              <input
+                id="input"
+                type="text"
+                placeholder="Resposta"
+                value={answer}
+                onChange={(e) => setAnswer(e.target.value.toLowerCase())}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleAnswer();
+                  }
+                }}
+              />
+              <button id="botaoEnviar" onClick={handleAnswer}>
+                Enviar
+              </button>
+            </div>
+          </div>
+          <div id="textoEscondido">
+            <p>Clique</p>
+            <p
+              id="aqui"
+              onClick={() => {
+                setQrCode(true);
               }}
-            />
-            <button id="botaoEnviar" onClick={() => props.setLevel(props.level + 1)}>
+            >
+              Aqui
+            </p>
+            <button
+              id="botaoEnviar"
+              onClick={() => props.setLevel(props.level + 1)}
+            >
               Enviar
             </button>
           </div>
-        </div>
-        <div id="textoEscondido">
-          <p>Clique</p>
-          <p
-            id="aqui"
-            onClick={() => {
-              setQrCode(true);
-            }}
-          >
-            Aqui
-          </p>
         </div>
       </div>
     </>
