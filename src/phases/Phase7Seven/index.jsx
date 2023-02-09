@@ -1,5 +1,5 @@
 import "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../../styleFases.css";
 import "../../Shake.css";
@@ -8,6 +8,7 @@ import imagem51 from "../../markers/51.png";
 export default function PhaseSeven(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
+  const [mostrar, setMostrar] = useState(false);
 
   useEffect(() => {
     if (mostrar) {
@@ -76,7 +77,7 @@ export default function PhaseSeven(props) {
         </div>
         {mostrar && (
           <div id="mostrar">
-            9 / 47 / 7 <br/> 38 / 18 / 3 <br/> 209 / 5 / 3 <br/> 768 / 1 / 11
+            9 / 47 / 7 <br/><br/> 38 / 18 / 3 <br/><br/> 209 / 5 / 3 <br/><br/> 768 / 1 / 11
           </div>
         )}
       </div>
