@@ -1,5 +1,9 @@
 import "react";
+<<<<<<< Updated upstream
 import { useState } from "react";
+=======
+import {useState} from "react";
+>>>>>>> Stashed changes
 import "../../styleFases.css";
 import "../../Shake.css";
 import imagem51 from "../../markers/51.png";
@@ -8,6 +12,7 @@ export default function PhaseSeven(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
 
+<<<<<<< Updated upstream
   useEffect(() => {
     if (mostrar) {
       const timer = setTimeout(() => {
@@ -26,10 +31,13 @@ export default function PhaseSeven(props) {
     }
   }, [mostrar]);
 
+=======
+>>>>>>> Stashed changes
   const handleAnswer = () => {
     if (answer === "você") {
       props.setLevel(props.level + 1);
     } else if (answer === "harry potter") {
+<<<<<<< Updated upstream
       alert(
         "Em nossa jornada é preciso descobrir tesouros escondidos, trazendo novas descobertas e alegrias à nossa vida"
       );
@@ -37,6 +45,11 @@ export default function PhaseSeven(props) {
       alert(
         "Um assento é como um abraço acolhedor, oferecendo conforto e segurança em nossa jornada."
       );
+=======
+      alert("Em nossa jornada é preciso descobrir tesouros escondidos, trazendo novas descobertas e alegrias à nossa vida");
+    } else if (answer === "voce") {
+      alert("Um assento é como um abraço acolhedor, oferecendo conforto e segurança em nossa jornada.");
+>>>>>>> Stashed changes
     } else {
       setIsShaking(true);
       setTimeout(() => {
@@ -44,7 +57,11 @@ export default function PhaseSeven(props) {
       }, 1000);
     }
   };
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
   return (
     <div className={`shake-container ${isShaking ? "shake" : ""}`}>
       <div id="container">
