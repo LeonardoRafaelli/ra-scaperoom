@@ -12,8 +12,19 @@ import PhaseTen from "./phases/Phase10Ten";
 import Confetti from "react-confetti";
 
 function App() {
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(JSON.parse(localStorage.getItem("level")));
   const [confetti, setConfetti] = useState(false);
+
+  useEffect(() => {
+    if(level === null){
+      localStorage.setItem("level", 1);
+      setLevel(1);
+    } else {
+      localStorage.setItem("level", level);
+    }
+  }, [level])
+
+
 
   useEffect(() => {
     if (level != 1) setConfetti(true);

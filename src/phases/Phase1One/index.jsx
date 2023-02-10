@@ -11,8 +11,10 @@ export default function PhaseOne(props) {
 
   const handleAnswer = () => {
     switch (answer) {
-      case "opostos":
-        props.setLevel(props.level + 1);
+      case "opostos": {
+          alert("Password: 256")
+          props.setLevel(props.level + 1);
+      }
         break;
       case "oposto":
         alert("+s");

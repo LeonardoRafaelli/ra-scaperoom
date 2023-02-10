@@ -14,7 +14,9 @@ export default function PhaseFour(props) {
     } else if (
       answer === "robert baden powell" ||
       answer === "robert baden-powell" ||
-      answer === "robert"
+      answer === "robert"              ||
+      answer === "baden powell"        ||
+      answer === "baden-powell"
     ) {
       alert(
         "A criação de algo novo é consumado pelo intelecto, mas despertado pelo instinto de uma necessidade pessoal"
