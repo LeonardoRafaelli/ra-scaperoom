@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import PhaseOne from "./phases/Phase1One";
 import PhaseTwo from "./phases/Phase2Two";
 import PhaseThree from "./phases/Phase3Three";
@@ -10,21 +10,41 @@ import PhaseEight from "./phases/Phase8Eight";
 import PhaseNine from "./phases/Phase9Nine";
 import PhaseTen from "./phases/Phase10Ten";
 import Confetti from "react-confetti";
+import Fireworks from "fireworks-js";
+
+import "./styleFases.css";
+
+const FireworkComponent = () => {
+  const fireworksRef = useRef(null);
+
+  useEffect(() => {
+    const fireworks = new Fireworks(fireworksRef.current, {
+      maxRockets: 10, // by default 1
+      rocketSpawnInterval: 50, // by default 150
+      numParticles: 400, // by default 50
+    });
+    fireworks.start();
+
+    return () => {
+      fireworks.stop();
+    };
+  }, []);
+
+  return <div ref={fireworksRef} />;
+};
 
 function App() {
   const [level, setLevel] = useState(JSON.parse(localStorage.getItem("level")));
   const [confetti, setConfetti] = useState(false);
 
   useEffect(() => {
-    if(level === null){
+    if (level === null) {
       localStorage.setItem("level", 1);
       setLevel(1);
     } else {
       localStorage.setItem("level", level);
     }
-  }, [level])
-
-
+  }, [level]);
 
   useEffect(() => {
     if (level != 1) setConfetti(true);
@@ -58,21 +78,25 @@ function App() {
         return <PhaseTen level={level} setLevel={setLevel} />;
       case 11:
         return (
-          <h1>Congratulations! Easy hein?</h1>
-        )
+          <div>
+            <div className="containerWin">
+              <h1 className="congrats">CONGRATULATIONS!</h1>
+              <h2 className="completed">You have completed the game!</h2>
+            </div>
+
+            <FireworkComponent />
+          </div>
+        );
     }
   }
 
   return (
     <div>
       {getCurrentLevel()}
-      {confetti && (
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-          numberOfPieces={600}
-        />
-      )}
+      {
+        //if user get to level 11, don't show confetti
+        level != 11 && confetti && <Confetti />
+      }
     </div>
   );
 }

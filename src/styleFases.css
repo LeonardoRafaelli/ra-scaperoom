@@ -1,109 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 #texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    font-weight: 800;
-    margin-top: 4rem;
+  font-weight: 800;
+  margin-top: 4rem;
 }
 
 #qrCamera {
-    width: 20%;
-    margin-top: "5rem";
+  width: 20%;
+  margin-top: "5rem";
 }
 
 #items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 #resposta {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    width: 25%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  width: 25%;
 }
 
 #input {
-    width: 90%;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: 1px solid #000;
-    border-radius: 5px 0 0 5px;
-    padding-left: 5px;
+  width: 90%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 5px 0 0 5px;
+  padding-left: 5px;
 }
 
 #botaoEnviar {
-    width: 10%;
-    height: 2rem;
-    outline: none;
-    border: 1px solid #000;
-    border-radius: 0 5px 5px 0;
-    background-color: #000;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
+  width: 10%;
+  height: 2rem;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 0 5px 5px 0;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 #textoEscondido {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    margin-bottom: 5rem;
-    margin-right: 50rem;
-    font-size: larger;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  margin-bottom: 5rem;
+  margin-right: 50rem;
+  font-size: larger;
 }
 
 #textoEscondido p {
-    cursor: crosshair;
+  cursor: crosshair;
 }
 
 #aqui {
-    margin-left: 0.5rem;
-    text-decoration: underline;
+  margin-left: 0.5rem;
+  text-decoration: underline;
 }
 
 #imagemQrCode {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
 }
 
 #imagemQrCode p {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #mostrar {
-    position: absolute;
-    top: 10rem;
-    right: 20rem;
+  position: absolute;
+  top: 10rem;
+  right: 20rem;
+}
+
+.containerWin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.congrats {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.completed {
+  font-family: "Orbitron", sans-serif;
 }
