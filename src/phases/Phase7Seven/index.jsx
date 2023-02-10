@@ -30,6 +30,7 @@ export default function PhaseSeven(props) {
 
   const handleAnswer = () => {
     if (answer === "você") {
+      alert("Password: 5F9");
       props.setLevel(props.level + 1);
     } else if (answer === "harry potter") {
       alert(
@@ -48,7 +49,7 @@ export default function PhaseSeven(props) {
   };
 
   return (
-    <>{!(accessPassword === "9o7") ?
+    <>{!(accessPassword === "8nM") ?
       <input
         value={accessPassword}
         onChange={(e) => setAccessPassword(e.target.value)}

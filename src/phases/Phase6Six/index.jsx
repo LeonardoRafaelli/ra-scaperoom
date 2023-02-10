@@ -11,6 +11,7 @@ export default function PhaseSix(props) {
 
   const handleAnswer = () => {
     if (answer === "leonardo di ser piero da vinci") {
+      alert("Password: 8nM");
       props.setLevel(props.level + 1);
     } else if (answer === "leonardo da vinci") {
       alert(
