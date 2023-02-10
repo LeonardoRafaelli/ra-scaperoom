@@ -42,7 +42,7 @@ export default function PhaseTwo(props) {
         <button
           id="botaoVoltar"
           type="button"
-          onClick={() => props.setLevel(0)}
+          onClick={() => props.setLevel(1)}
         >
           Voltar Início
         </button>

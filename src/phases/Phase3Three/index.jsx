@@ -41,7 +41,7 @@ export default function PhaseThree(props) {
         <button
           id="botaoVoltar"
           type="button"
-          onClick={() => props.setLevel(0)}
+          onClick={() => props.setLevel(1)}
         >
           Voltar Início
         </button>
