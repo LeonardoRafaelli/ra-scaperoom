@@ -50,7 +50,7 @@ export default function PhaseSix(props) {
             />
             <button
               id="botaoEnviar"
-              onClick={() => props.setLevel(props.level + 1)}
+              onClick={handleAnswer}
             >
               Enviar
             </button>

@@ -22,7 +22,7 @@ export default function PhaseFive(props) {
       }, 1000);
     }
   };
-  
+
   return (
     <div className={`shake-container ${isShaking ? "shake" : ""}`}>
       <div id="container">
@@ -46,7 +46,7 @@ export default function PhaseFive(props) {
             />
             <button
               id="botaoEnviar"
-              onClick={() => props.setLevel(props.level + 1)}
+              onClick={handleAnswer}
             >
               Enviar
             </button>
