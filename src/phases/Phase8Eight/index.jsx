@@ -19,6 +19,7 @@ export default function PhaseEight(props) {
       );
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);

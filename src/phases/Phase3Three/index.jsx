@@ -29,6 +29,7 @@ export default function PhaseThree(props) {
 
       default:
         setIsShaking(true);
+        setAnswer("");
         setTimeout(() => {
           setIsShaking(false);
         }, 1000);

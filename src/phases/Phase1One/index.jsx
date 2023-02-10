@@ -21,6 +21,7 @@ export default function PhaseOne(props) {
         break;
       default:
         setIsShaking(true);
+        setAnswer("");
         setTimeout(() => {
           setIsShaking(false);
         }, 1000);

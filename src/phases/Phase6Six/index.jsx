@@ -23,6 +23,7 @@ export default function PhaseSix(props) {
       );
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);

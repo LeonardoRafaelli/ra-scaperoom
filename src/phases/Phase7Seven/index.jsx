@@ -42,6 +42,7 @@ export default function PhaseSeven(props) {
       );
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);

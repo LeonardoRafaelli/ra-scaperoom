@@ -19,6 +19,7 @@ export default function PhaseFive(props) {
       alert("baka adda naganna");
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);

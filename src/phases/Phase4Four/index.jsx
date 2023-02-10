@@ -26,6 +26,7 @@ export default function PhaseFour(props) {
       );
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);

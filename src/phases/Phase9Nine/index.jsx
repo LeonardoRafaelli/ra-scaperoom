@@ -14,6 +14,7 @@ export default function PhaseNine(props) {
       props.setLevel(props.level + 1);
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);

@@ -30,6 +30,7 @@ export default function PhaseTwo(props) {
         break;
       default:
         setIsShaking(true);
+        setAnswer("");
         setTimeout(() => {
           setIsShaking(false);
         }, 1000);

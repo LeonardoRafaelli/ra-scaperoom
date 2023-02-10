@@ -17,6 +17,7 @@ export default function PhaseTen(props) {
       );
     } else {
       setIsShaking(true);
+      setAnswer("");
       setTimeout(() => {
         setIsShaking(false);
       }, 1000);
