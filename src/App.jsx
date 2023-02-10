@@ -45,6 +45,10 @@ function App() {
         return <PhaseNine level={level} setLevel={setLevel} />;
       case 10:
         return <PhaseTen level={level} setLevel={setLevel} />;
+      case 11:
+        return (
+          <h1>Congratulations! Easy hein?</h1>
+        )
     }
   }
 

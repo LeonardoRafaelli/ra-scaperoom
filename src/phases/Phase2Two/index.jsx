@@ -2,7 +2,7 @@ import "react";
 import "../../styleFases.css";
 import { useEffect } from "react";
 import imagem46 from "/imgs/46.png";
-import qrCodeImage from "../../assets/qrCodePhaseTwo.png";
+import qrCodeImage from "/imgs/qrCodePhaseTwo.png";
 import { useState } from "react";
 import "../../Shake.css";
 

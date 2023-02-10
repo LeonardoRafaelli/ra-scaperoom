@@ -2,14 +2,14 @@ import "react";
 import { useState } from "react";
 import "../../styleFases.css";
 import "../../Shake.css";
-import imagem54 from "/imgs/markers/54.png";
+import imagem54 from "/imgs/54.png";
 
 export default function PhaseTen(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
 
   const handleAnswer = () => {
-    if (answer === "leona lewis ") {
+    if (answer === "leona lewis") {
       props.setLevel(props.level + 1);
     } else if (answer === "avatar") {
       alert(
