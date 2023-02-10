@@ -1,6 +1,7 @@
 import "react";
 import "../../styleFases.css";
 import imagem45 from "../../markers/45.png";
+import qrCodeImage from "../../assets/qrCodeCamera.png";
 import { useState } from "react";
 import "../../Shake.css";
 
@@ -12,7 +13,6 @@ export default function PhaseOne(props) {
     switch (answer) {
       case "opostos":
         props.setLevel(props.level + 1);
-
         break;
       case "oposto":
         alert("+s");
@@ -30,6 +30,7 @@ export default function PhaseOne(props) {
       <div id="container">
         <div id="texto">
           <h1>Fase {props.level}</h1>
+          <img id="qrCamera" src={qrCodeImage} alt="QR Code" />
         </div>
         <div id="items">
           <img src={imagem45} alt="Marker 1" />

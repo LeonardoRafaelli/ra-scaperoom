@@ -38,6 +38,7 @@ export default function PhaseTwo(props) {
           {qrCode && (
             <div id="imagemQrCode">
               <img src={qrCodeImage} alt="QR Code" />
+              <p>senha</p>
             </div>
           )}
         </div>
