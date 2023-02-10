@@ -10,6 +10,8 @@ export default function PhaseThree(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
 
+  const [accessPassword, setAccessPassword] = useState("");
+
   const handleAnswer = () => {
     switch (answer) {
       case "eu":
@@ -33,6 +35,14 @@ export default function PhaseThree(props) {
   };
 
   return (
+    <>
+    {!(accessPassword === "256") ?
+        <input
+          value={accessPassword}
+          onChange={(e) => setAccessPassword(e.target.value)}
+          placeholder="Password"
+         />
+         :
     <div className={`shake-container ${isShaking ? "shake" : ""}`}>
       <div id="container">
         <div id="texto">
@@ -62,6 +72,7 @@ export default function PhaseThree(props) {
           </div>
         </div>
       </div>
-    </div>
+    </div> }
+    </>
   );
 }

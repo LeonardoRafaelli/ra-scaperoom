@@ -16,8 +16,10 @@ export default function PhaseTwo(props) {
 
   const handleAnswer = () => {
     switch (answer) {
-      case "arnold schwarzenegger":
+      case "arnold schwarzenegger": {
+        alert("Password: 849");
         props.setLevel(props.level + 1);
+      }
         break;
       case "arnoldschwarzenegger":
         alert("Ás vezes no vazio do espaço é onde encontramos as respostas");
