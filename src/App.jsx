@@ -47,7 +47,7 @@ function App() {
   }, [level]);
 
   useEffect(() => {
-    if (level != 1) setConfetti(true);
+    if (level != 1 && level != null) setConfetti(true);
     const timer = setTimeout(() => {
       setConfetti(false);
     }, 4000);
