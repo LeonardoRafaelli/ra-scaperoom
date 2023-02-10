@@ -34,7 +34,7 @@ const FireworkComponent = () => {
 };
 
 function App() {
-  const [level, setLevel] = useState(JSON.parse(localStorage.getItem("level")));
+  const [level, setLevel] = useState(2);
   const [confetti, setConfetti] = useState(false);
 
   useEffect(() => {

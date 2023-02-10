@@ -42,8 +42,8 @@ export default function PhaseTwo(props) {
           value={accessPassword}
           onChange={(e) => setAccessPassword(e.target.value)}
           placeholder="Password"
-         />
-         :
+        />
+        :
         <div className={`shake-container ${isShaking ? "shake" : ""}`}>
           <div id="qrCode">
             {qrCode && (
