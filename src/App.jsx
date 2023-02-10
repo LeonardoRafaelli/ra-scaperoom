@@ -37,6 +37,8 @@ function App() {
   const [level, setLevel] = useState(JSON.parse(localStorage.getItem("level")));
   const [confetti, setConfetti] = useState(false);
 
+  const [accessPassword, setAccessPassword] = useState("");
+
   useEffect(() => {
     if (level === null) {
       localStorage.setItem("level", 1);
@@ -78,14 +80,41 @@ function App() {
         return <PhaseTen level={level} setLevel={setLevel} />;
       case 11:
         return (
-          <div>
-            <div className="containerWin">
-              <h1 className="congrats">CONGRATULATIONS!</h1>
-              <h2 className="completed">You have completed the game!</h2>
-            </div>
+          <>
+            <div id="containerGeral">
 
-            <FireworkComponent />
-          </div>
+              <button
+                id="botaoVoltar"
+                type="button"
+                onClick={() => {
+                  props.setLevel(1)
+                  localStorage.setItem("level", 1)
+                }}
+              >
+                Voltar Início
+              </button>
+              {!(accessPassword === "2Lv") ? (
+                <>
+                  <h1>Fase 11</h1>
+                  <input
+                    id="inputPassword"
+                    value={accessPassword}
+                    onChange={(e) => setAccessPassword(e.target.value)}
+                    placeholder="Password"
+                  />
+                </>
+              ) : (
+                <div>
+                  <div className="containerWin">
+                    <h1 className="congrats">CONGRATULATIONS!</h1>
+                    <h2 className="completed">You have completed the game!</h2>
+                  </div>
+
+                  <FireworkComponent />
+                </div>
+              )}
+            </div>
+          </>
         );
     }
   }

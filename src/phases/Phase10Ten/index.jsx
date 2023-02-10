@@ -10,6 +10,7 @@ export default function PhaseTen(props) {
 
   const handleAnswer = () => {
     if (answer === "leona lewis") {
+      alert("Password: 2Lv")
       props.setLevel(props.level + 1);
     } else if (answer === "avatar") {
       alert(
@@ -27,6 +28,7 @@ export default function PhaseTen(props) {
   return (
     <>
       <div id="containerGeral">
+
         <button
           id="botaoVoltar"
           type="button"
@@ -38,12 +40,15 @@ export default function PhaseTen(props) {
           Voltar Início
         </button>
         {!(accessPassword === "8Bj") ? (
-          <input
-            id="inputPassword"
-            value={accessPassword}
-            onChange={(e) => setAccessPassword(e.target.value)}
-            placeholder="Password"
-          />
+          <>
+            <h1>Fase 10</h1>
+            <input
+              id="inputPassword"
+              value={accessPassword}
+              onChange={(e) => setAccessPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </>
         ) : (
           <div className={`shake-container ${isShaking ? "shake" : ""}`}>
             <div id="container">

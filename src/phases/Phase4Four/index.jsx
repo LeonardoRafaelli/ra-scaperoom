@@ -36,6 +36,7 @@ export default function PhaseFour(props) {
   return (
     <>
       <div id="containerGeral">
+
         <button
           id="botaoVoltar"
           type="button"
@@ -47,12 +48,15 @@ export default function PhaseFour(props) {
           Voltar Início
         </button>
         {!(accessPassword === "K63") ? (
-          <input
-            id="inputPassword"
-            value={accessPassword}
-            onChange={(e) => setAccessPassword(e.target.value)}
-            placeholder="Password"
-          />
+          <>
+            <h1>Fase 4</h1>
+            <input
+              id="inputPassword"
+              value={accessPassword}
+              onChange={(e) => setAccessPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </>
         ) : (
           <div className={`shake-container ${isShaking ? "shake" : ""}`}>
             <div id="container">

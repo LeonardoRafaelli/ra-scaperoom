@@ -63,12 +63,15 @@ export default function PhaseSeven(props) {
           Voltar Início
         </button>
         {!(accessPassword === "8nM") ? (
-          <input
-            id="inputPassword"
-            value={accessPassword}
-            onChange={(e) => setAccessPassword(e.target.value)}
-            placeholder="Password"
-          />
+          <>
+            <h1>Fase 7</h1>
+            <input
+              id="inputPassword"
+              value={accessPassword}
+              onChange={(e) => setAccessPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </>
         ) : (
           <div className={`shake-container ${isShaking ? "shake" : ""}`}>
             <div id="container">

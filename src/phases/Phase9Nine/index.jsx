@@ -24,6 +24,7 @@ export default function PhaseNine(props) {
   return (
     <>
       <div id="containerGeral">
+        <h1>Fase 9</h1>
         <button
           id="botaoVoltar"
           type="button"
@@ -35,12 +36,15 @@ export default function PhaseNine(props) {
           Voltar Início
         </button>
         {!(accessPassword === "9aB") ? (
-          <input
-            id="inputPassword"
-            value={accessPassword}
-            onChange={(e) => setAccessPassword(e.target.value)}
-            placeholder="Password"
-          />
+          <>
+            <h1>Fase 9</h1>
+            <input
+              id="inputPassword"
+              value={accessPassword}
+              onChange={(e) => setAccessPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </>
         ) : (
           <div className={`shake-container ${isShaking ? "shake" : ""}`}>
             <div id="container">

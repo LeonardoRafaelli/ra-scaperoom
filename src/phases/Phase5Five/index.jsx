@@ -29,6 +29,7 @@ export default function PhaseFive(props) {
   return (
     <>
       <div id="containerGeral">
+
         <button
           id="botaoVoltar"
           type="button"
@@ -40,12 +41,15 @@ export default function PhaseFive(props) {
           Voltar Início
         </button>
         {!(accessPassword === "9B1") ? (
-          <input
-            id="inputPassword"
-            value={accessPassword}
-            onChange={(e) => setAccessPassword(e.target.value)}
-            placeholder="Password"
-          />
+          <>
+            <h1>Fase 5</h1>
+            <input
+              id="inputPassword"
+              value={accessPassword}
+              onChange={(e) => setAccessPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </>
         ) : (
           <div className={`shake-container ${isShaking ? "shake" : ""}`}>
             <div id="container">
