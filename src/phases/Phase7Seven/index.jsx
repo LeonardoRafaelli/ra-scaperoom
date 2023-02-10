@@ -53,7 +53,7 @@ export default function PhaseSeven(props) {
           <h1>Fase {props.level}</h1>
         </div>
         <div id="items">
-          <img src={imagem51} alt="Marker 6" />
+          <img src={imagem51} alt="Marker 7" />
           <div id="resposta">
             <input
               id="input"

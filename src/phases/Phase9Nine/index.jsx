@@ -1,10 +1,25 @@
 import "react";
+import { useState } from "react";
 import "../../styleFases.css";
 import "../../Shake.css";
 import imagem53 from "../../markers/53.png";
 
+
 export default function PhaseNine(props) {
+  const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
+
+  const handleAnswer = () => {
+    if (answer === "persistência" || answer === "persistencia") {
+      props.setLevel(props.level + 1);
+    } else {
+      setIsShaking(true);
+      setTimeout(() => {
+        setIsShaking(false);
+      }, 1000);
+    }
+  };
+
   return (
     <div className={`shake-container ${isShaking ? "shake" : ""}`}>
       <div id="container">
@@ -14,12 +29,21 @@ export default function PhaseNine(props) {
         <div id="items">
           <img src={imagem53} alt="Marker 9" />
           <div id="resposta">
-            <input id="input" type="text" />
+            <input
+              id="input"
+              type="text"
+              placeholder="Resposta"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value.toLowerCase())}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleAnswer();
+                }
+              }}
+            />
             <button
               id="botaoEnviar"
-              onClick={() => {
-                props.setLevel(props.level + 1);
-              }}
+              onClick={() => props.setLevel(props.level + 1)}
             >
               Enviar
             </button>
@@ -29,3 +53,4 @@ export default function PhaseNine(props) {
     </div>
   );
 }
+
