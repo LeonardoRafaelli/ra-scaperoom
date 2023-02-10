@@ -34,7 +34,7 @@ const FireworkComponent = () => {
 };
 
 function App() {
-  const [level, setLevel] = useState(2);
+  const [level, setLevel] = useState(1);
   const [confetti, setConfetti] = useState(false);
 
   useEffect(() => {

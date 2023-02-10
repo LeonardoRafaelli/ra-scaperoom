@@ -16,10 +16,11 @@ export default function PhaseTwo(props) {
 
   const handleAnswer = () => {
     switch (answer) {
-      case "arnold schwarzenegger": {
-        alert("Password: 849");
-        props.setLevel(props.level + 1);
-      }
+      case "arnold schwarzenegger":
+        {
+          alert("Password: 849");
+          props.setLevel(props.level + 1);
+        }
         break;
       case "arnoldschwarzenegger":
         alert("Ás vezes no vazio do espaço é onde encontramos as respostas");
@@ -37,63 +38,70 @@ export default function PhaseTwo(props) {
 
   return (
     <>
-      {!(accessPassword === "256") ?
-        <input
-          value={accessPassword}
-          onChange={(e) => setAccessPassword(e.target.value)}
-          placeholder="Password"
-        />
-        :
-        <div className={`shake-container ${isShaking ? "shake" : ""}`}>
-          <div id="qrCode">
-            {qrCode && (
-              <div id="imagemQrCode">
-                <img src={qrCodeImage} alt="QR Code" />
-                <p>senha</p>
-              </div>
-            )}
-          </div>
-          <div id="container">
-            <div id="texto">
-              <h1>Fase {props.level}</h1>
+      <div id="containerGeral">
+        <button
+          id="botaoVoltar"
+          type="button"
+          onClick={() => props.setLevel(0)}
+        >
+          Voltar Início
+        </button>
+        {!(accessPassword === "256") ? (
+          <input
+            id="inputPassword"
+            value={accessPassword}
+            onChange={(e) => setAccessPassword(e.target.value)}
+            placeholder="Password"
+          />
+        ) : (
+          <div className={`shake-container ${isShaking ? "shake" : ""}`}>
+            <div id="qrCode">
+              {qrCode && (
+                <div id="imagemQrCode">
+                  <img src={qrCodeImage} alt="QR Code" />
+                  <p>senha</p>
+                </div>
+              )}
             </div>
-            <div id="items">
-              <img src={imagem46} alt="Marker 2" />
-              <div id="resposta">
-                <input
-                  id="input"
-                  type="text"
-                  placeholder="Resposta"
-                  value={answer}
-                  onChange={(e) => setAnswer(e.target.value.toLowerCase())}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      handleAnswer();
-                    }
+            <div id="container">
+              <div id="texto">
+                <h1>Fase {props.level}</h1>
+              </div>
+              <div id="items">
+                <img src={imagem46} alt="Marker 2" />
+                <div id="resposta">
+                  <input
+                    id="input"
+                    type="text"
+                    placeholder="Resposta"
+                    value={answer}
+                    onChange={(e) => setAnswer(e.target.value.toLowerCase())}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleAnswer();
+                      }
+                    }}
+                  />
+                  <button id="botaoEnviar" onClick={handleAnswer}>
+                    Enviar
+                  </button>
+                </div>
+              </div>
+              <div id="textoEscondido">
+                <p>Clique</p>
+                <p
+                  id="aqui"
+                  onClick={() => {
+                    setQrCode(true);
                   }}
-                />
-                <button
-                  id="botaoEnviar"
-                  onClick={handleAnswer}
                 >
-                  Enviar
-                </button>
+                  Aqui
+                </p>
               </div>
             </div>
-            <div id="textoEscondido">
-              <p>Clique</p>
-              <p
-                id="aqui"
-                onClick={() => {
-                  setQrCode(true);
-                }}
-              >
-                Aqui
-              </p>
-            </div>
           </div>
-        </div>
-      }
+        )}
+      </div>
     </>
   );
 }
