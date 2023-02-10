@@ -3,7 +3,7 @@ import "react";
 import { useState } from "react";
 
 import "../../styleFases.css";
-import imagem47 from "../../markers/47.png";
+import imagem47 from "/imgs/47.png";
 import "../../Shake.css";
 
 export default function PhaseThree(props) {

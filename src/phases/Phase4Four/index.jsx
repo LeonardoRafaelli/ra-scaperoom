@@ -1,6 +1,6 @@
 import "react";
 import "../../styleFases.css";
-import imagem48 from "../../markers/48.png";
+import imagem48 from "/imgs/48.png";
 import { useState } from "react";
 import "../../Shake.css";
 

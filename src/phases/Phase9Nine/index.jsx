@@ -2,7 +2,7 @@ import "react";
 import { useState } from "react";
 import "../../styleFases.css";
 import "../../Shake.css";
-import imagem53 from "../../markers/53.png";
+import imagem53 from "/imgs/markers/53.png";
 
 
 export default function PhaseNine(props) {

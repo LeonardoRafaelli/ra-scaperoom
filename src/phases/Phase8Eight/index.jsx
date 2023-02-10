@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "../../styleFases.css";
 import "../../Shake.css";
-import imagem52 from "../../markers/52.png";
+import imagem52 from "/imgs/markers/52.png";
 
 export default function PhaseEight(props) {
   const [answer, setAnswer] = useState("");

@@ -1,6 +1,6 @@
 import "react";
 import "../../styleFases.css";
-import imagem45 from "../../markers/45.png";
+import imagem45 from "/imgs/45.png";
 import qrCodeImage from "../../assets/qrCodeCamera.png";
 import { useState } from "react";
 import "../../Shake.css";

@@ -1,7 +1,7 @@
 import "react";
 import { useState } from "react";
 import "../../styleFases.css";
-import imagem50 from "../../markers/50.png";
+import imagem50 from "/imgs/50.png";
 import "../../Shake.css";
 
 export default function PhaseSix(props) {

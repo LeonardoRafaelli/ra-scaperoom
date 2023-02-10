@@ -2,7 +2,7 @@ import "react";
 import { useState } from "react";
 import "../../styleFases.css";
 import "../../Shake.css";
-import imagem54 from "../../markers/54.png";
+import imagem54 from "/imgs/markers/54.png";
 
 export default function PhaseTen(props) {
   const [answer, setAnswer] = useState("");
