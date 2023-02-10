@@ -54,7 +54,10 @@ export default function PhaseSeven(props) {
         <button
           id="botaoVoltar"
           type="button"
-          onClick={() => props.setLevel(1)}
+          onClick={() => {
+            props.setLevel(1)
+            localStorage.setItem("level", 1)
+          }}
         >
           Voltar Início
         </button>
