@@ -26,7 +26,7 @@ export default function PhaseNine(props) {
   return (
     <>
       <div id="containerGeral">
-        <h1>Fase 9</h1>
+        
         <button
           id="botaoVoltar"
           type="button"
