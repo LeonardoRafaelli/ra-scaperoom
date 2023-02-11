@@ -40,7 +40,7 @@ function App() {
   const [accessPassword, setAccessPassword] = useState("");
 
   useEffect(() => {
-    if (level === null) {
+    if (level === null || (level < 1 || level > 11)) {
       localStorage.setItem("level", 1);
       setLevel(1);
     } else {
@@ -49,7 +49,7 @@ function App() {
   }, [level]);
 
   useEffect(() => {
-    if (level != 1 && level != null) setConfetti(true);
+    if (level != 1 && level != null && level < 12) setConfetti(true);
     const timer = setTimeout(() => {
       setConfetti(false);
     }, 4000);
