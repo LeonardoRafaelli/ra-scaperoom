@@ -42,7 +42,7 @@ export default function PhaseEight(props) {
         >
           Voltar Início
         </button>
-        {!(accessPassword === "8nM") ? (
+        {!(accessPassword === "5F9") ? (
           <>
             <h1>Fase 8</h1>
             <input
