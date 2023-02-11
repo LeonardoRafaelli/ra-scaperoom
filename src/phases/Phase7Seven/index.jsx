@@ -103,7 +103,7 @@ export default function PhaseSeven(props) {
               {mostrar && (
                 <div id="mostrar">
                   9 / 47 / 7 <br />
-                  <br /> 38 / 18 / 3 <br />
+                  <br /> 38 / 18 / 2 <br />
                   <br /> 209 / 5 / 3 <br />
                   <br /> 768 / 1 / 11
                 </div>
