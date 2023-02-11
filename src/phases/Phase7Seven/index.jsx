@@ -10,6 +10,8 @@ export default function PhaseSeven(props) {
   const [isShaking, setIsShaking] = useState(false);
   const [mostrar, setMostrar] = useState(false);
 
+  const [accessPassword, setAccessPassword] = useState("");
+
   useEffect(() => {
     if (mostrar) {
       const timer = setTimeout(() => {
