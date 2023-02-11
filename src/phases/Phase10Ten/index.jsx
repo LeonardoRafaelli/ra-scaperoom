@@ -8,6 +8,8 @@ export default function PhaseTen(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
 
+  const [accessPassword, setAccessPassword] = useState("");
+
   const handleAnswer = () => {
     if (answer === "leona lewis") {
       alert("Password: 2Lv")

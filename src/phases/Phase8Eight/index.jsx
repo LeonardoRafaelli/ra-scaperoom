@@ -9,6 +9,8 @@ export default function PhaseEight(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
 
+  const [accessPassword, setAccessPassword] = useState("");
+
   const handleAnswer = () => {
     if (answer === "não me subestimem" || answer === "não me subestimem!") {
       alert("Password: 9aB");
