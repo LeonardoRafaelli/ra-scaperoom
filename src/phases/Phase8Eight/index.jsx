@@ -12,12 +12,12 @@ export default function PhaseEight(props) {
   const [accessPassword, setAccessPassword] = useState("");
 
   const handleAnswer = () => {
-    if (answer === "não me subestimem" || answer === "não me subestimem!") {
+    if (answer === "jack ruby" || answer === "jacob rubenstein") {
       alert("Password: 9aB");
       props.setLevel(props.level + 1);
-    } else if (answer === "naruto") {
+    } else if (answer === "nobodysgoingtoshootatme") {
       alert(
-        "Uma frase de ocissálC oturaN T1, E25, M11:10, está prestes a ser revelada para aqueles corajosos que não se subestimam."
+        "But someone did"
       );
     } else {
       setIsShaking(true);
