@@ -1,13 +1,17 @@
 import "react";
 import "../../styleFases.css";
 import imagem49 from "/imgs/49.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../Shake.css";
 
 export default function PhaseFive(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
   const [accessPassword, setAccessPassword] = useState("");
+
+  useEffect(() => {
+    document.querySelector("#page-title").innerText = "TryToScape9";
+  }, [])
 
   const handleAnswer = () => {
     if (answer === "vejo") {

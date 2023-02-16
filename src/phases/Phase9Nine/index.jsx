@@ -1,5 +1,5 @@
 import "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styleFases.css";
 import "../../Shake.css";
 import imagem53 from "/imgs/53.png";
@@ -10,8 +10,13 @@ export default function PhaseNine(props) {
 
   const [accessPassword, setAccessPassword] = useState("");
 
+
+  useEffect(() => {
+    window.history.pushState(null, "", "/utf-?");
+  }, []);
+
   const handleAnswer = () => {
-    if (answer === "persistência") {
+    if (answer === "boa sorte") {
       alert("Password: 8Bj");
       props.setLevel(props.level + 1);
     } else {
@@ -35,11 +40,11 @@ export default function PhaseNine(props) {
             localStorage.setItem("level", 1)
           }}
         >
-          Voltar Início
+          Voltar ?
         </button>
-        {!(accessPassword === "9aB") ? (
+        {!(accessPassword === "7aB") ? (
           <>
-            <h1>Fase 9</h1>
+            <h1>Fase ?</h1>
             <input
               id="inputPassword"
               value={accessPassword}
@@ -51,7 +56,7 @@ export default function PhaseNine(props) {
           <div className={`shake-container ${isShaking ? "shake" : ""}`}>
             <div id="container">
               <div id="texto">
-                <h1>Fase {props.level}</h1>
+                <h1>Fase ?</h1>
               </div>
               <div id="items">
                 <img src={imagem53} alt="Marker 9" />

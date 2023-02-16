@@ -13,7 +13,7 @@ export default function PhaseEight(props) {
 
   const handleAnswer = () => {
     if (answer === "jack ruby" || answer === "jacob rubenstein") {
-      alert("Password: 9aB");
+      alert("Password: 7aB");
       props.setLevel(props.level + 1);
     } else if (answer === "nobodysgoingtoshootatme") {
       alert(
