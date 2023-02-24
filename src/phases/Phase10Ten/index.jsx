@@ -3,21 +3,27 @@ import { useState } from "react";
 import "../../styleFases.css";
 import "../../Shake.css";
 import imagem54 from "/imgs/54.png";
+import imagem55 from "/imgs/55.png";
+import birdImg from "/imgs/birdImg.jpg";
+import birdQrCode from "/imgs/qrCodePhase10Bird.png"
 
 export default function PhaseTen(props) {
   const [answer, setAnswer] = useState("");
   const [isShaking, setIsShaking] = useState(false);
 
   const [accessPassword, setAccessPassword] = useState("");
+  const [newImage, setNewImage] = useState(1);
 
   const handleAnswer = () => {
-    if (answer === "leona lewis") {
+    if (answer === "parabens" || answer === "parabéns") {
       alert("Password: 2Lv")
       props.setLevel(props.level + 1);
-    } else if (answer === "avatar") {
-      alert(
-        "A música é como um labirinto, e sua guardiã, escondendo a verdade em sua voz enigmática, esperando ser descoberta por aqueles que buscam a verdade."
-      );
+    } else if(answer === "13"){
+      setNewImage(1)
+      setAnswer("");
+    } else if(answer === "becada"){
+      setNewImage(2)
+      setAnswer("");
     } else {
       setIsShaking(true);
       setAnswer("");
@@ -58,7 +64,12 @@ export default function PhaseTen(props) {
                 <h1>Fase {props.level}</h1>
               </div>
               <div id="items">
-                <img src={imagem54} alt="Marker 9" />
+                <div>
+                  {newImage === 2 &&  
+                    <img src={birdQrCode} style={{position: "absolute", width: "6px", margin: "6rem 0 0 7rem"}}/>
+                  }
+                  <img src={newImage === 0 ? imagem54 : newImage === 1 ? imagem55 : birdImg} alt="Marker 9" />
+                </div>
                 <div id="resposta">
                   <input
                     id="input"
