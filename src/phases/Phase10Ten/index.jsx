@@ -13,7 +13,7 @@ export default function PhaseTen(props) {
 
   const [accessPassword, setAccessPassword] = useState("");
   // Atualizar para começar em 0
-  const [newImage, setNewImage] = useState(1);
+  const [newImage, setNewImage] = useState(0);
 
   const handleAnswer = () => {
     if (answer === "parabens" || answer === "parabéns") {
