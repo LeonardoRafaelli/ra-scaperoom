@@ -12,6 +12,7 @@ export default function PhaseTen(props) {
   const [isShaking, setIsShaking] = useState(false);
 
   const [accessPassword, setAccessPassword] = useState("");
+  // Atualizar para começar em 0
   const [newImage, setNewImage] = useState(1);
 
   const handleAnswer = () => {

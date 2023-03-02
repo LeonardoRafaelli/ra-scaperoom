@@ -9,6 +9,10 @@ export default function PhaseSix(props) {
   const [isShaking, setIsShaking] = useState(false);
   const [accessPassword, setAccessPassword] = useState("");
 
+  useEffect(() => {
+    document.querySelector("#page-title").innerText = "TryToScape";
+  }, [])
+
   const handleAnswer = () => {
     if (answer === "leonardo di ser piero da vinci") {
       alert("Password: 8nM");
