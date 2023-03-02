@@ -1,5 +1,5 @@
 import "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../styleFases.css";
 import imagem50 from "/imgs/50.png";
 import "../../Shake.css";
