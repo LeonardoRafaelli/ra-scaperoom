@@ -67,7 +67,7 @@ export default function PhaseTen(props) {
               <div id="items">
                 <div>
                   {newImage === 2 &&  
-                    <img src={birdQrCode} style={{position: "absolute", width: "4px", margin: "6rem 0 0 7rem"}}/>
+                    <img src={birdQrCode} style={{position: "absolute", width: "2px", margin: "6rem 0 0 7rem"}}/>
                   }
                   <img src={newImage === 0 ? imagem54 : newImage === 1 ? imagem55 : birdImg} alt="Marker 9" />
                 </div>
