@@ -16,7 +16,7 @@ export default function PhaseSeven(props) {
     if (mostrar) {
       const timer = setTimeout(() => {
         setMostrar(false);
-      }, 100);
+      }, 50);
       return () => {
         clearTimeout(timer);
       };
