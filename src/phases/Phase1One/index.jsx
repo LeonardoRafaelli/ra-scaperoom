@@ -44,6 +44,7 @@ export default function PhaseOne(props) {
               placeholder="Resposta"
               value={answer}
               onChange={(e) => setAnswer(e.target.value.toLowerCase())}
+              autoFocus
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   handleAnswer();

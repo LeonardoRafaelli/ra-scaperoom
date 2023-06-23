@@ -100,6 +100,7 @@ function App() {
                     id="inputPassword"
                     value={accessPassword}
                     onChange={(e) => setAccessPassword(e.target.value)}
+                    autoFocus
                     placeholder="Password"
                   />
                 </>
